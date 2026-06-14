@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<link rel="icon" type="image/x-icon" href="./assets/Logo.png"/>
+<link rel="icon" type="image/x-icon" href="./assets/Edu-icon.png"/>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>EducaHub | Seja um Voluntário</title>
@@ -89,6 +89,14 @@
   document.getElementById('menuToggle').addEventListener('click', () => {
     document.getElementById('mobileMenu').classList.toggle('open');
   });
+
+  // EducaHub dark mode (shared across pages)
+  (function () {
+    var LS_DARK = 'educahub-darkmode';
+    try {
+      if (localStorage.getItem(LS_DARK) === 'true') document.documentElement.classList.add('dark');
+    } catch (e) {}
+  })();
 </script>
 </body>
 </html>

@@ -289,33 +289,439 @@ function startLesson(sIdx, lIdx) {
 
 // =============== MATERIAL ===============
 const MATERIAL = [
-  { section: 'Seção 1 — Matemática Básica', cls: 'bg-prim10', lessons: [
-    { title: 'Números e Representações', summary: 'Números inteiros, naturais e negativos e sua representação na reta numérica.', topics: ['Valor absoluto e comparação de números','Números naturais, inteiros e negativos','Localização e ordenação na reta numérica','Notação e leitura de números com sinal'] },
-    { title: 'Adição e Subtração', summary: 'Algoritmos de soma com transporte e subtração com empréstimo, propriedades comutativa e associativa.', topics: ['Soma com reagrupamento (transporte)','Subtração com empréstimo','Propriedade comutativa: a+b = b+a','Propriedade associativa: (a+b)+c = a+(b+c)','Problemas do cotidiano'] },
-    { title: 'Multiplicação e Divisão', summary: 'Tabuada, multiplicação por dois dígitos, divisão exata e com resto, propriedade distributiva.', topics: ['Tabuada do 1 ao 12','Multiplicação por dois dígitos','Divisão exata e com resto','Propriedade distributiva','Relação inversa: multiplicação ↔ divisão'] },
-    { title: 'Ordem de Operações', summary: 'Parênteses, expoentes simples e a regra PEMDAS aplicada na resolução de expressões.', topics: ['Parênteses e colchetes','Expoentes simples (potências)','Regra PEMDAS/MDAS','Simplificação passo a passo','Expressões progressivas'] },
-    { title: 'Propriedades dos Operadores', summary: 'Comutativa, associativa e distributiva aplicadas para facilitar cálculos.', topics: ['Propriedade comutativa na soma e multiplicação','Propriedade associativa','Propriedade distributiva na prática','Elemento neutro da adição e multiplicação','Reescrever expressões para simplificar'] },
-    { title: 'Estimativa e Arredondamento', summary: 'Regras de arredondamento e uso de estimativas para verificação rápida de resultados.', topics: ['Regras de arredondamento','Arredondamento para dezena, centena e milhar','Casas decimais','Estimativa para checagem de cálculos','Erro absoluto aproximado'] },
-    { title: 'Problemas Verbais Básicos', summary: 'Traduzir enunciados em operações matemáticas e resolver com estratégias organizadas.', topics: ['Identificar dados e incógnitas','Escolher a operação correta','Resolver passo a passo','Modelagem de situações cotidianas','Verificar a resposta'] },
-    { title: 'Revisão e Mini-Projeto', summary: 'Revisão integrada com aplicação prática: elaborar um orçamento simples usando as habilidades aprendidas.', topics: ['Revisão de todas as operações','Arredondamento e estimativa','Projeto prático: orçamento mensal','Síntese de habilidades','Apresentação de solução'] },
-  ]},
-  { section: 'Seção 2 — Frações, Decimais e Porcentagens', cls: 'bg-sec10', lessons: [
-    { title: 'Conceito de Fração', summary: 'Numerador, denominador, frações próprias, impróprias e equivalentes com representação visual.', topics: ['Numerador e denominador','Frações próprias e impróprias','Frações equivalentes','Simplificação de frações','Representação visual (modelos)'] },
-    { title: 'Operações com Frações', summary: 'Soma, subtração com MMC, multiplicação e divisão de frações, simplificação e inverso multiplicativo.', topics: ['Soma e subtração com mesmo denominador','MMC para denominadores diferentes','Multiplicação de frações','Divisão (inverso multiplicativo)','Simplificação de resultados'] },
-    { title: 'Decimais e Operações', summary: 'Leitura, escrita e operações com números decimais, conversão para frações.', topics: ['Leitura e escrita de decimais','Soma e subtração com alinhamento de casas','Multiplicação e divisão com decimais','Conversão decimal ↔ fração','Aplicações: dinheiro e medidas'] },
-    { title: 'Conversões Fração ↔ Decimal ↔ Porcentagem', summary: 'Transformar entre as três representações e interpretar resultados em contextos variados.', topics: ['Fração para decimal (dividir)','Decimal para porcentagem (×100)','Porcentagem para fração','Tabela de conversões comuns','Problemas de interpretação'] },
-    { title: 'Porcentagens Aplicadas', summary: 'Descontos, acréscimos e juros simples em situações práticas de finanças pessoais.', topics: ['Cálculo de desconto','Cálculo de acréscimo/aumento','Juros simples básicos','Variação percentual','Simulações de compras'] },
-    { title: 'Problemas Combinados e Projeto', summary: 'Resolver casos reais integrando frações, decimais e porcentagens em um projeto prático.', topics: ['Integração dos três formatos','Receita ajustada por porções','Cálculo de custos com desconto','Verificação por conversões alternativas','Projeto prático com explicação'] },
-  ]},
-  { section: 'Seção 3 — Introdução à Álgebra', cls: 'bg-acc10', lessons: [
-    { title: 'Conceito de Variável e Expressões', summary: 'Símbolos para números desconhecidos, escrever e avaliar expressões algébricas.', topics: ['O que é uma variável','Termos, coeficientes e constantes','Traduzir frases em expressões','Avaliar expressões substituindo valores','Expressões com mais de uma variável'] },
-    { title: 'Simplificação de Expressões', summary: 'Combinar termos semelhantes e aplicar a propriedade distributiva em expressões algébricas.', topics: ['Termos semelhantes','Combinar termos semelhantes','Propriedade distributiva com variáveis','Expandir e simplificar','Expressões com parênteses aninhados'] },
-    { title: 'Equações Lineares Simples', summary: 'Resolver equações do tipo ax + b = c usando operações inversas e verificação.', topics: ['Isolar a variável','Operações inversas','Verificação por substituição','Equações com adição/subtração','Equações com multiplicação/divisão'] },
-    { title: 'Equações com Termos em Ambos os Lados', summary: 'Transpor termos, simplificar e resolver equações com variáveis nos dois lados.', topics: ['Transpor termos com variáveis','Simplificar ambos os lados','Manter a igualdade','Checagem final','Equações com parênteses'] },
-    { title: 'Equações com Frações e Decimais', summary: 'Eliminar denominadores usando MMC e manipular equações com valores decimais.', topics: ['Multiplicar ambos os lados pelo MMC','Eliminar denominadores','Equações com decimais','Comparar métodos de resolução','Precisão nos cálculos'] },
-    { title: 'Problemas Verbais — Modelagem', summary: 'Transformar enunciados do cotidiano em equações, resolver e interpretar a solução.', topics: ['Definir a variável','Montar a equação a partir do texto','Resolver e verificar','Interpretar a solução no contexto','Problemas com números consecutivos, idades, geometria'] },
-    { title: 'Revisão e Mini-Projeto de Modelagem', summary: 'Projeto integrador: montar e resolver equações para um caso real, apresentando o raciocínio completo.', topics: ['Revisão de simplificação e resolução','Comparação de lojas/preços','Modelagem de problemas complexos','Apresentação do raciocínio','Rubrica: correção, método, clareza, verificação, aplicação'] },
-  ]},
+  {
+    section: 'Seção 1 — Matemática Básica',
+    cls: 'bg-prim10',
+    lessons: [
+      {
+        title: 'Números e Representações',
+        summary: 'Números inteiros, naturais e negativos e sua representação na reta numérica.',
+        topics: [
+          'Valor absoluto e comparação de números',
+          'Números naturais, inteiros e negativos',
+          'Localização e ordenação na reta numérica',
+          'Notação e leitura de números com sinal'
+        ],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. O que são Números Inteiros?</h3>
+          <p style="margin-bottom: 12px;">Os números inteiros são uma extensão dos números naturais (0, 1, 2...) e incluem também os seus opostos negativos. Eles se dividem em:</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 6px;"><strong style="color: hsl(var(--foreground));">Inteiros Positivos:</strong> Maiores que zero (ex: +2, 5). O sinal de mais é opcional.</li>
+            <li style="margin-bottom: 6px;"><strong style="color: hsl(var(--foreground));">O Zero (0):</strong> É o centro neutro, não sendo positivo nem negativo.</li>
+            <li style="margin-bottom: 6px;"><strong style="color: hsl(var(--foreground));">Inteiros Negativos:</strong> Menores que zero (ex: -15). O sinal de menos é obrigatório.</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">2. A Reta Numérica</h3>
+          <p style="margin-bottom: 12px;">É a linha infinita usada para organizar os números: o zero fica no centro, os positivos crescem para a direita e os negativos decrescem para a esquerda.</p>
+          
+          <div style="background-color: hsl(var(--muted)); border-left: 4px solid hsl(var(--primary)); padding: 12px 16px; margin: 16px 0; border-radius: var(--radius);">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 4px;">Regra de Ouro da Reta Numérica:</strong>
+            Qualquer número situado à esquerda de outro é sempre menor do que ele. Qualquer número à direita é sempre maior.
+          </div>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">3. Valor Absoluto (ou Módulo)</h3>
+          <p style="margin-bottom: 12px;">Representa a distância de um número até o zero. Como distâncias são sempre positivas, o módulo ignora o sinal do número. É representado por barras verticais | |.</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 14px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Comparação</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Substitua o espaço por > ou < : -5 ___ -2</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> -5 < -2. Como -2 está mais perto do zero na reta, ele é o maior.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Adição e Subtração',
+        summary: 'Algoritmos de soma com transporte e subtração com empréstimo, propriedades comutativa e associativa.',
+        topics: ['Soma com reagrupamento (transporte)', 'Subtração com empréstimo', 'Propriedade comutativa: a+b = b+a', 'Propriedade associativa: (a+b)+c = a+(b+c)', 'Problemas do cotidiano'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Algoritmos da Adição e Subtração</h3>
+          <p style="margin-bottom: 12px;">Na adição, organizamos os números alinhando suas unidades. Quando a soma de uma coluna passa de 9, realizamos o <strong>reagrupamento (transporte)</strong>, levando o valor excedente para a próxima coluna à esquerda.</p>
+          <p style="margin-bottom: 12px;">Na subtração, quando o algarismo superior é menor do que o inferior, recorremos ao <strong>empréstimo</strong> da casa imediatamente à esquerda.</p>
+          
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">2. Propriedades Estruturais</h3>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 6px;"><strong>Comutativa:</strong> A ordem das parcelas não altera a soma (a + b = b + a).</li>
+            <li style="margin-bottom: 6px;"><strong>Associativa:</strong> O agrupamento das parcelas não altera o resultado final ((a + b) + c = a + (b + c)).</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Soma com Reagrupamento</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Calcule a soma de 138 + 75.</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Somando unidades (8+5=13, sobe 1), dezenas (3+7+1=11, sobe 1) e centenas (1+1=2). Resultado: 213.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Multiplicação e Divisão',
+        summary: 'Tabuada, multiplicação por dois dígitos, divisão exata e com resto, propriedade distributiva.',
+        topics: ['Tabuada do 1 ao 12', 'Multiplicação por dois dígitos', 'Divisão exata e com resto', 'Propriedade distributiva', 'Relação inversa: multiplicação <-> divisão'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Multiplicação por Dois Dígitos e Distributiva</h3>
+          <p style="margin-bottom: 12px;">Para multiplicar por dois dígitos, calculamos os produtos parciais linha por linha, avançando uma casa para a esquerda ao mudar para a casa das dezenas, e somamos os resultados no final.</p>
+          <p style="margin-bottom: 12px;">A <strong>propriedade distributiva</strong> nos permite quebrar um cálculo complexo: a * (b + c) = (a * b) + (a * c).</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Divisão com Resto</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Divida 17 por 5 e aponte o quociente e o resto.</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> O 5 cabe 3 vezes inteiras dentro do 17 (3 * 5 = 15). Sobram 2 unidades de resto. Quociente: 3, Resto: 2.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Ordem de Operações',
+        summary: 'Parênteses, expoentes simples e a regra PEMDAS aplicada na resolução de expressões.',
+        topics: ['Parênteses e colchetes', 'Expoentes simples (potências)', 'Regra PEMDAS/MDAS', 'Simplificação passo a passo', 'Expressões progressivas'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. A Hierarquia PEMDAS</h3>
+          <p style="margin-bottom: 12px;">Para resolver qualquer expressão matemática sem ambiguidades, obedecemos rigorosamente à seguinte sequência operacional:</p>
+          <ol style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 4px;"><strong>P:</strong> Parênteses (e colchetes/chaves) de dentro para fora.</li>
+            <li style="margin-bottom: 4px;"><strong>E:</strong> Expoentes e Potências.</li>
+            <li style="margin-bottom: 4px;"><strong>M/D:</strong> Multiplicação e Divisão (na ordem em que aparecem, da esquerda para a direita).</li>
+            <li style="margin-bottom: 4px;"><strong>A/S:</strong> Adição e Subtração (na ordem em que aparecem, da esquerda para a direita).</li>
+          </ol>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Aplicação PEMDAS</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Resolva: 5 + (3^2 - 4) * 2</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> 3^2 = 9; depois o parênteses (9 - 4) = 5; segue para a multiplicação 5 * 2 = 10; e por fim a soma 5 + 10 = 15.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Propriedades dos Operadores',
+        summary: 'Comutativa, associativa e distributiva aplicadas para facilitar cálculos.',
+        topics: ['Propriedade comutativa na soma e multiplicação', 'Propriedade associativa', 'Propriedade distributiva na prática', 'Elemento neutro da adição e multiplicação', 'Reescrever expressões para simplificar'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Elementos Neutros e Estruturas</h3>
+          <p style="margin-bottom: 12px;">Reconhecer as propriedades operacionais nos ajuda a simplificar contas de cabeça reorganizando seus fatores ou parcelas:</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 6px;"><strong>Elemento Neutro:</strong> Na adição é o 0 (a + 0 = a). Na multiplicação é o 1 (a * 1 = a).</li>
+            <li style="margin-bottom: 6px;"><strong>Comutativa:</strong> Válida para adição e multiplicação. Inaplicável em divisões ou subtrações.</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Cálculo Distributivo</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Calcule mentalmente: 4 * 102</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Reescrevemos como 4 * (100 + 2) = (4 * 100) + (4 * 2) = 400 + 8 = 408.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Estimativa e Arredondamento',
+        summary: 'Regras de arredondamento e uso de estimativas para verificação rápida de resultados.',
+        topics: ['Regras de arredondamento', 'Arredondamento para dezena, centena e milhar', 'Casas decimais', 'Estimativa para checagem de cálculos', 'Erro absoluto aproximado'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Critério de Arredondamento Padronizado</h3>
+          <p style="margin-bottom: 12px;">Para realizar o arredondamento de um número para uma casa específica, analisamos o dígito imediatamente à sua direita:</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 6px;">Se for <strong>5 ou maior</strong>: Adicionamos 1 unidade ao dígito alvo e zeramos o restante.</li>
+            <li style="margin-bottom: 6px;">Se for <strong>menor que 5</strong>: Mantemos o dígito alvo intacto e zeramos as casas seguintes.</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Arredondamento de Centena</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Arredonde 1487 para a centena mais próxima.</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> O dígito das centenas é 4, à direita temos 8 (maior que 5). O 4 sobe para 5 e as demais viram zero. Resposta: 1500.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Problemas Verbais Básicos',
+        summary: 'Traduzir enunciados em operações matemáticas e resolver com estratégias organizadas.',
+        topics: ['Identificar dados e incógnitas', 'Escolher a operação correta', 'Resolver passo a passo', 'Modelagem de situações cotidianas', 'Verificar a resposta'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Passos Fundamentais de Interpretação</h3>
+          <p style="margin-bottom: 12px;">Para traduzir problemas escritos em operações, mapeamos palavras-chave:</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 4px;"><em>Diferença, resto ou troco</em> indicam <strong>subtração</strong>.</li>
+            <li style="margin-bottom: 4px;"><em>Soma, total ou ganho</em> indicam <strong>adição</strong>.</li>
+            <li style="margin-bottom: 4px;"><em>Distribuir igualmente</em> indica <strong>divisão</strong>.</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Problema do Cotidiano</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Carlos comprou 3 pacotes de figurinhas por 4 reais cada. Pagou com 20 reais. Quanto sobrou?</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Gasto total: 3 * 4 = 12 reais. Cálculo da diferença para o troco: 20 - 12 = 8 reais.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Revisão e Mini-Projeto',
+        summary: 'Revisão integrada com aplicação prática: elaborar um orçamento simples usando as habilidades aprendidas.',
+        topics: ['Revisão de todas as operações', 'Arredondamento e estimativa', 'Projeto prático: orçamento mensal', 'Síntese de habilidades', 'Apresentação de solução'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Consolidação e Orçamentos</h3>
+          <p style="margin-bottom: 12px;">Neste fechamento de módulo, consolidamos as 4 operações fundamentais construindo uma planilha de gastos reais. Aprendemos a balancear receitas (entradas) contra despesas (saídas) planejadas.</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Estudo de Caso Guiado</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exemplo Prático: Balanço</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Renda familiar de 3500 reais. Gastos fixos: 1280 (aluguel), 420 (contas) e 850 (alimentação).</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resultado:</strong> Despesas acumuladas: 1280 + 420 + 850 = 2550 reais. Saldo líquido livre restante: 3500 - 2550 = 950 reais.</p>
+          </div>
+        </div>`
+      }
+    ]
+  },
+  {
+    section: 'Seção 2 — Frações, Decimais e Porcentagens',
+    cls: 'bg-sec10',
+    lessons: [
+      {
+        title: 'Conceito de Fração',
+        summary: 'Numerador, denominador, frações próprias, impróprias e equivalentes com representação visual.',
+        topics: ['Numerador e denominador', 'Frações próprias e impróprias', 'Frações equivalentes', 'Simplificação de frações', 'Representação visual (modelos)'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Estrutura de Partição</h3>
+          <p style="margin-bottom: 12px;">Uma fração quantifica a divisão de partes iguais de um inteiro:</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 6px;"><strong>Denominador (base):</strong> Indica em quantas fatias o todo original foi cortado.</li>
+            <li style="margin-bottom: 6px;"><strong>Numerador (topo):</strong> Indica quantas dessas fatias foram coletadas.</li>
+          </ul>
+          <p style="margin-bottom: 12px;">Frações <strong>equivalentes</strong> representam a mesma proporção geométrica, mas utilizam termos numéricos diferentes. São encontradas dividindo ou multiplicando cima e baixo pelo mesmo número.</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Simplificação</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Reduza a fração 12/18 até torná-la irredutível.</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Dividimos ambos os termos por seu divisor comum máximo, o 6: 12 ÷ 6 = 2 e 18 ÷ 6 = 3. Obtemos 2/3.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Operações com Frações',
+        summary: 'Soma, subtração com MMC, multiplication e divisão de frações, simplificação e inverso multiplicativo.',
+        topics: ['Soma e subtração com mesmo denominador', 'MMC para denominadores diferentes', 'Multiplicação de frações', 'Divisão (inverso multiplicativo)', 'Simplificação de resultados'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Regras Algorítmicas de Frações</h3>
+          <p style="margin-bottom: 12px;">Para somas e subtrações com denominadores distintos, extraímos previamente o Mínimo Múltiplo Comum (MMC) para equalizar as bases aritméticas.</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 6px;"><strong>Multiplicação:</strong> Multiplicamos linearmente numerador por numerador e denominador por denominador.</li>
+            <li style="margin-bottom: 6px;"><strong>Divisão:</strong> Mantemos a primeira fração intacta e multiplicamos pelo inverso da segunda fração.</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Adição com MMC</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Some 1/2 + 1/3.</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> O MMC de 2 e 3 é 6. Convertendo: 1/2 vira 3/6 e 1/3 vira 2/6. Somando os numeradores: 3/6 + 2/6 = 5/6.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Decimais e Operações',
+        summary: 'Leitura, escrita e operações com números decimais, conversão para frações.',
+        topics: ['Leitura e escrita de decimais', 'Soma e subtração com alinhamento de casas', 'Multiplicação e divisão com decimais', 'Conversão decimal <-> fração', 'Aplicações: dinheiro e medidas'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Operações com Ponto Flutuante</h3>
+          <p style="margin-bottom: 12px;">Na adição e subtração de decimais, a diretriz inflexível é fixar <strong>vírgula debaixo de vírgula</strong>, preenchendo as extremidades com zeros se necessário.</p>
+          <p style="margin-bottom: 12px;">Na multiplicação, efetuamos o cálculo de forma inteira e, no produto final, contamos o acumulado de casas decimais dos fatores para posicionar a vírgula da direita para a esquerda.</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Alinhamento Posicional</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Calcule 5.2 - 1.75.</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Igualamos as casas: 5.20 - 1.75. Efetuando a subtração armada com empréstimo obtemos 3.45.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Conversões Fração ↔ Decimal ↔ Porcentagem',
+        summary: 'Transformar entre as três representações e interpretar resultados em contextos variados.',
+        topics: ['Fração para decimal (dividir)', 'Decimal para porcentagem (x100)', 'Porcentagem para fração', 'Tabela de conversões comuns', 'Problemas de interpretação'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Tríade Proporcional</h3>
+          <p style="margin-bottom: 12px;">As três notações são formas alternativas de expor uma mesma porção:</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 6px;"><strong>Fração para Decimal:</strong> Dividimos numerador pelo denominador.</li>
+            <li style="margin-bottom: 6px;"><strong>Decimal para Porcentagem:</strong> Multiplicamos o número decimal por 100 e anexamos o símbolo %.</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Conversão Integrada</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Converta a fração 3/5 em decimal e porcentagem.</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> 3 ÷ 5 = 0.60. Multiplicando 0.60 * 100 chegamos a 60%. Respostas: 0.60 e 60%.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Porcentagens Aplicadas',
+        summary: 'Descontos, acréscimos e juros simples em situações práticas de finanças pessoais.',
+        topics: ['Cálculo de desconto', 'Cálculo de acréscimo/aumento', 'Juros simples básicos', 'Variação percentual', 'Simulações de compras'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Aplicação Comercial de Taxas</h3>
+          <p style="margin-bottom: 12px;">Para computar variações percentuais em dinheiro, convertemos a porcentagem em número decimal dividindo por 100 e multiplicamos pelo valor total de referência.</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 4px;">Em um <strong>desconto</strong>, subtraímos esse montante calculado do valor de partida.</li>
+            <li style="margin-bottom: 4px;">Em um <strong>acréscimo</strong>, adicionamos o montante calculado ao valor de partida.</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Abatimento de Preço</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Um casaco de 120 reais está com 15% de desconto. Qual o preço final?</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Valor deduzido: 0.15 * 120 = 18 reais. Preço final com desconto: 120 - 18 = 102 reais.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Problemas Combinados e Projeto',
+        summary: 'Resolver casos reais integrando frações, decimais e porcentagens em um projeto prático.',
+        topics: ['Integração dos três formatos', 'Receita ajustada por porções', 'Cálculo de custos com desconto', 'Verificação por conversões alternativas', 'Projeto prático com explicação'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Análise Multi-Formato Unificada</h3>
+          <p style="margin-bottom: 12px;">Problemas práticos complexos fundem números racionais fracionários, medições em ponto flutuante e taxas de juros ou liquidações em uma mesma esteira de cálculo.</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Estudo de Caso de Produção</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exemplo Prático: Redimensionamento</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Uma receita exige 1/2 kg de insumo. Queremos produzir metade dessa receita e comprar o estoque com 10% de desconto. O quilo custa 6.00 reais.</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Quantidade necessária: 1/2 * 1/2 = 1/4 kg (0.25 kg). Preço base: 0.25 * 6.00 = 1.50 real. Valor do desconto (10%): 0.15 real. Custo final real calculado: 1.50 - 0.15 = 1.35 real.</p>
+          </div>
+        </div>`
+      }
+    ]
+  },
+  {
+    section: 'Seção 3 — Introdução à Álgebra',
+    cls: 'bg-acc10',
+    lessons: [
+      {
+        title: 'Conceito de Variável e Expressões',
+        summary: 'Símbolos para números desconhecidos, escrever e avaliar expressões algébricas.',
+        topics: ['O que é uma variável', 'Termos, coeficientes e constantes', 'Traduzir frases em expressões', 'Avaliar expressões substituindo valores', 'Expressões com mais de uma variável'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Elementos da Estrutura Algébrica</h3>
+          <p style="margin-bottom: 12px;">Uma <strong>variável</strong> é um caractere literal (como x ou y) usado para ocupar o espaço de um número que ainda não conhecemos ou que pode oscilar.</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 6px;"><strong>Coeficiente:</strong> O fator numérico colado multiplicando a variável (ex: em 3x, é o 3).</li>
+            <li style="margin-bottom: 6px;"><strong>Constante:</strong> O termo numérico isolado (ex: em 3x + 5, é o 5).</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Determinação de Valor Numérico</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Avalie a expressão 3x + 5 para quando x vale 4.</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Substituindo o caractere pelo número real informado: 3 * 4 + 5 = 12 + 5 = 17.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Simplificação de Expressões',
+        summary: 'Combinar termos semelhantes e aplicar a propriedade distributiva em expressões algébricas.',
+        topics: ['Termos semelhantes', 'Combinar termos semelhantes', 'Propriedade distributiva com variáveis', 'Expandir e simplificar', 'Expressões com parênteses aninhados'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Redução de Monômios Semelhantes</h3>
+          <p style="margin-bottom: 12px;">Só podemos operar somas e subtrações algébricas entre <strong>termos semelhantes</strong>, ou seja, blocos que compartilham rigorosamente as mesmas letras e potências. Constantes limpas não se misturam com variáveis nas somas.</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Expansão Distributiva e Redução</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Simplifique: 2(x + 3) + 4x - 1</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Aplicamos a distributiva: 2x + 6 + 4x - 1. Juntamos os semelhantes literais (2x + 4x = 6x) e as constantes (6 - 1 = 5). Resultado irredutível: 6x + 5.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Equações Lineares Simples',
+        summary: 'Resolver equações do tipo ax + b = c usando operações inversas e verificação.',
+        topics: ['Isolar a variável', 'Operações inversas', 'Verificação por substituição', 'Equações com adição/subtração', 'Equações com multiplicação/divisão'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. O Princípio de Equivalência da Balança</h3>
+          <p style="margin-bottom: 12px;">Uma equação determina um equilíbrio de igualdade. O alvo é sempre <strong>isolar o termo literal</strong> em um dos lados do sinal. Para mover elementos de um membro ao outro, aplicamos a operação algébrica inversa:</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 4px;">Soma inverte para Subtração.</li>
+            <li style="margin-bottom: 4px;">Multiplicação inverte para Divisão.</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Isolação Passo a Passo</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Resolva a equação: 2x + 5 = 13</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Passamos o 5 subtraindo: 2x = 13 - 5 -> 2x = 8. Passamos o 2 dividindo: x = 8 / 2 -> x = 4.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Equações com Termos em Ambos os Lados',
+        summary: 'Transpor termos, simplificar e resolver equações com variáveis nos dois lados.',
+        topics: ['Transpor termos com variáveis', 'Simplificar ambos os lados', 'Manter a igualdade', 'Checagem final', 'Equações com parênteses'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Transposição Bilateral Estratégica</h3>
+          <p style="margin-bottom: 12px;">Se a incógnita surgir pulverizada nos dois lados da balança, reordenamos a estrutura movendo todos os blocos com letras para o membro esquerdo e transferindo as constantes limpas para o membro direito, sem esquecer de trocar os seus respectivos sinais.</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Transposição Ordenada</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Resolva a equação: 5x - 3 = 2x + 9</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Movemos os termos com letras para a esquerda e números para a direita: 5x - 2x = 9 + 3. Simplificamos os dois lados: 3x = 12. Isolamos: x = 12 ÷ 3 -> x = 4.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Equações com Frações e Decimais',
+        summary: 'Eliminar denominadores usando MMC e manipular equações com valores decimais.',
+        topics: ['Multiplicar ambos os lados pelo MMC', 'Eliminar denominadores', 'Equações com decimais', 'Comparar métodos de resolução', 'Precisão nos cálculos'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Limpeza de Denominador</h3>
+          <p style="margin-bottom: 12px;">Para dissolver denominadores fracionários em uma equação, multiplicamos a expressão inteira (todos os termos de ambos os membros) pelo MMC dos denominadores. Isso limpa as frações do cálculo.</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Isolamento Fracionário Simples</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">Resolva: x/2 + 1 = 4</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Passamos o 1 subtraindo: x/2 = 4 - 1 -> x/2 = 3. O denominador 2 que divide o termo literal passa multiplicando o membro oposto: x = 3 * 2 -> x = 6.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Problemas Verbais — Modelagem',
+        summary: 'Transformar enunciados do cotidiano em equações, resolver e interpretar a solução.',
+        topics: ['Definir a variável', 'Montar a equação a partir do texto', 'Resolver e verificar', 'Interpretar a solução no contexto', 'Problemas com números consecutivos, idades, geometria'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Tradução Textual para Álgebra</h3>
+          <p style="margin-bottom: 12px;">Modelar significa mapear pistas em linguagem corrida e convertê-las em operadores lógicos:</p>
+          <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 4px;"><em>O dobro de um valor oculto</em> -> 2x</li>
+            <li style="margin-bottom: 4px;"><em>Um valor somado a quatro</em> -> x + 4</li>
+            <li style="margin-bottom: 4px;"><em>Equivale a / Resulta em</em> -> =</li>
+          </ul>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Exercícios Resolvidos</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Exercício 1: Modelagem Completa</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">O triplo de um número somado com 4 é igual a 19. Qual é o número?</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Convertemos para o modelo: 3x + 4 = 19. Isolando o termo literal: 3x = 19 - 4 -> 3x = 15. Dividindo por 3: x = 15 ÷ 3 -> x = 5.</p>
+          </div>
+        </div>`
+      },
+      {
+        title: 'Revisão e Mini-Projeto de Modelagem',
+        summary: 'Projeto integrador: montar e resolver equações para um caso real, apresentando o raciocínio completo.',
+        topics: ['Revisão de simplificação e resolução', 'Comparação de lojas/preços', 'Modelagem de problemas complexos', 'Apresentação do raciocínio', 'Rubrica: correction, método, clareza, verificação, aplicação'],
+        explanation: `<div style="font-family: 'Segoe UI', Arial, sans-serif; color: hsl(var(--foreground)); background-color: hsl(var(--background)); line-height: 1.6; padding: 15px; max-width: 800px; margin: 0 auto;">
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; font-size: 1.25rem;">1. Análise Algebrica de Ponto de Equilíbrio</h3>
+          <p style="margin-bottom: 12px;">Equações são ideais para comparar propostas de prestadores de serviço ou assinaturas comerciais que combinam taxas fixas de adesão com cobranças variáveis por consumo.</p>
+
+          <h3 style="color: hsl(var(--secondary)); border-bottom: 2px solid hsl(var(--border)); padding-bottom: 6px; margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">Estudo Analítico de Tarifas</h3>
+          <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 14px; margin-bottom: 4px;">
+            <strong style="color: hsl(var(--foreground)); display: block; margin-bottom: 6px; font-size: 0.95rem;">Estudo de Caso: Loja A vs Loja B</strong>
+            <p style="margin: 0 0 8px 0; font-style: italic; color: hsl(var(--muted-foreground));">A Loja A cobra taxa fixa de 20 reais mais 2 reais por livro. A Loja B cobra taxa fixa de 11 reais mais 5 reais por livro. Quando as duas custam o mesmo?</p>
+            <p style="margin: 0; color: hsl(var(--foreground));"><strong style="color: hsl(var(--primary));">Resolução:</strong> Igualamos os modelos de custo com base em x (livros): 20 + 2x = 11 + 5x. Transpondo os termos: 20 - 11 = 5x - 2x -> 9 = 3x. Isolando o x: x = 9 / 3 -> x = 3. O custo empata exatamente no consumo de 3 livros.</p>
+          </div>
+        </div>`
+      }
+    ]
+  }
 ];
 
 function renderMaterial() {
@@ -347,7 +753,60 @@ function renderMaterial() {
   });
   html += `</div>`;
   container.innerHTML = html;
-  container.querySelectorAll('.acc-trigger').forEach(b => b.onclick = () => b.parentElement.classList.toggle('open'));
+  container.querySelectorAll('.acc-trigger').forEach(b => b.onclick = () => {
+    const key = b.closest('.acc-item')?.dataset?.key;
+    if (!key) return;
+    const [sIdx, lIdx] = key.split('-').map(Number);
+    currentMaterialLesson = { sIdx, lIdx };
+    switchTab('material-lesson');
+  });
+}
+
+let currentMaterialLesson = { sIdx: 0, lIdx: 0 };
+
+function renderMaterialLesson() {
+  const c = document.getElementById('view-material-lesson');
+  if (!c) return;
+
+  const { sIdx, lIdx } = currentMaterialLesson || { sIdx: 0, lIdx: 0 };
+  const sec = MATERIAL?.[sIdx];
+  const lesson = sec?.lessons?.[lIdx];
+
+  const title = lesson?.title || 'Assunto';
+  const explanation = lesson?.explanation || 'Explicação detalhada indisponível para este assunto no momento.';
+  const topics = Array.isArray(lesson?.topics) ? lesson.topics : [];
+
+  c.innerHTML = `
+    <div class="material-lesson animate-reveal-up">
+      <button type="button" class="back-btn" id="material-lesson-back">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        Voltar para Material
+      </button>
+
+      <h2 class="title">${title}</h2>
+      <p class="subtitle">Explicação detalhada</p>
+
+      <div class="explanation">${explanation}</div>
+
+      ${topics.length ? `
+        <div class="related">
+          <h4>Tópicos relacionados</h4>
+          <ul>${topics.map(t => `<li>${t}</li>`).join('')}</ul>
+        </div>
+      ` : ''}
+
+      <div class="divider"></div>
+
+      <button class="btn-primary" type="button" id="material-lesson-close">
+        Concluir
+      </button>
+    </div>
+  `;
+
+  document.getElementById('material-lesson-back')?.addEventListener('click', () => switchTab('material'));
+  document.getElementById('material-lesson-close')?.addEventListener('click', () => switchTab('material'));
 }
 
 // =============== CALCULADORA ===============
@@ -599,7 +1058,10 @@ function renderPerfil() {
     <div class="perfil-head">
       <div class="perfil-avatar-wrap">
         <div class="perfil-avatar">
-          ${curAv ? `<div class="colored ${curAv.cls}">${initial}</div>` : `<svg class="placeholder" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 22a8 8 0 0 1 16 0"/></svg>`}
+          ${curAv ? (curAv.id === 'avatar-edu'
+            ? `<div class="colored avatar-edu"></div>`
+            : `<div class="colored ${curAv.cls}">${initial}</div>`)
+            : `<svg class="placeholder" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 22a8 8 0 0 1 16 0"/></svg>`}
         </div>
         <button class="perfil-avatar-edit" id="picker-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
       </div>
@@ -670,6 +1132,7 @@ function renderPerfil() {
 const renderViews = {
   trilha: renderTrilha,
   material: renderMaterial,
+  'material-lesson': renderMaterialLesson,
   calculadora: renderCalc,
   loja: renderLoja,
   ajustes: renderAjustes,
