@@ -897,7 +897,6 @@ const SHOP_ITEMS = [
   { id:'avatar-roxo', name:'Avatar Roxo', price:50, cat:'perfil', visual:{type:'avatar',cls:'bg-purple',l:'P'} },
   { id:'avatar-verde', name:'Avatar Verde', price:50, cat:'perfil', visual:{type:'avatar',cls:'bg-emerald',l:'V'} },
   { id:'avatar-azul', name:'Avatar Azul', price:50, cat:'perfil', visual:{type:'avatar',cls:'bg-teal',l:'A'} },
-  { id:'avatar-laranja', name:'Avatar Laranja', price:50, cat:'perfil', visual:{type:'avatar',cls:'bg-pink2',l:'L'} },
   { id:'avatar-dourado', name:'Avatar Dourado', price:50, cat:'perfil', visual:{type:'avatar',cls:'bg-yellow-bg',l:'D'} },
   { id:'dobro-xp', name:'Dobro de XP', price:250, cat:'powerups', visual:{type:'power',cls:'bg-orange-power',e:'⚡'} },
   { id:'protecao', name:'Proteção de Ofensiva', price:200, cat:'powerups', visual:{type:'power',cls:'bg-teal-power',e:'🛡️'} },
