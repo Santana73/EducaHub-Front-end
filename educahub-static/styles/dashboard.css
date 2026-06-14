@@ -261,7 +261,7 @@
 .bg-purple { background: rgb(168 85 247); }
 .bg-emerald { background: rgb(52 211 153); }
 .bg-teal { background: rgb(13 148 136); }
-.bg-pink2 { background: rgb(236 72 153); }
+.bg-pink2 { background: rgb(255, 165, 0); }
 .bg-yellow-bg { background: rgb(250 204 21); }
 .bg-grad-night { background: linear-gradient(135deg, rgb(55 48 163), rgb(147 51 234)); }
 .bg-grad-ocean { background: linear-gradient(135deg, rgb(45 212 191), rgb(103 232 249)); }
